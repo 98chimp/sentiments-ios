@@ -1,0 +1,6 @@
+framework module Pods_SentimentsTests {
+  umbrella header "Pods-SentimentsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

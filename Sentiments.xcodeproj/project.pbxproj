@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		787A8A1BF6FC744622D5218E /* Pods_Sentiments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16EE721CA449DEC042804443 /* Pods_Sentiments.framework */; };
+		B279BEC597EDAC28354361EB /* Pods_SentimentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66095E952433F17963314B27 /* Pods_SentimentsTests.framework */; };
+		EB6471082198C32C00A1ED5A /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6471072198C32C00A1ED5A /* ResultsTableViewCell.swift */; };
 		EB7645402197B5CE008797CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76453F2197B5CE008797CF /* AppDelegate.swift */; };
 		EB7645422197B5CE008797CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7645412197B5CE008797CF /* ViewController.swift */; };
 		EB7645452197B5CE008797CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB7645432197B5CE008797CF /* Main.storyboard */; };
 		EB7645472197B5D0008797CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB7645462197B5D0008797CF /* Assets.xcassets */; };
 		EB76454A2197B5D0008797CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB7645482197B5D0008797CF /* LaunchScreen.storyboard */; };
 		EB7645552197B5D0008797CF /* SentimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7645542197B5D0008797CF /* SentimentsTests.swift */; };
+		EB7645602197B8E4008797CF /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB76455F2197B8E4008797CF /* Comments.swift */; };
+		EBD7F22921ABB61F0021DC6F /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7F22821ABB61E0021DC6F /* FaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16EE721CA449DEC042804443 /* Pods_Sentiments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sentiments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B92358FF7A8AA00B371B4F /* Pods-Sentiments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentiments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sentiments/Pods-Sentiments.debug.xcconfig"; sourceTree = "<group>"; };
+		56C5024CC4FE00104E0CCC63 /* Pods-Sentiments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentiments.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sentiments/Pods-Sentiments.release.xcconfig"; sourceTree = "<group>"; };
+		66095E952433F17963314B27 /* Pods_SentimentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SentimentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82967ACFD8B0C6950558CB25 /* Pods-SentimentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentsTests/Pods-SentimentsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAC162CA25E9F2FD89A2126D /* Pods-SentimentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SentimentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SentimentsTests/Pods-SentimentsTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB6471072198C32C00A1ED5A /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		EB76453C2197B5CE008797CF /* Sentiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB76453F2197B5CE008797CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB7645412197B5CE008797CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +48,8 @@
 		EB7645502197B5D0008797CF /* SentimentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentimentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7645542197B5D0008797CF /* SentimentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentsTests.swift; sourceTree = "<group>"; };
 		EB7645562197B5D0008797CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB76455F2197B8E4008797CF /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		EBD7F22821ABB61E0021DC6F /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787A8A1BF6FC744622D5218E /* Pods_Sentiments.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +65,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B279BEC597EDAC28354361EB /* Pods_SentimentsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3439998EE2475C482C0087D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16EE721CA449DEC042804443 /* Pods_Sentiments.framework */,
+				66095E952433F17963314B27 /* Pods_SentimentsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4853DC61A075A8C3269D4F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19B92358FF7A8AA00B371B4F /* Pods-Sentiments.debug.xcconfig */,
+				56C5024CC4FE00104E0CCC63 /* Pods-Sentiments.release.xcconfig */,
+				82967ACFD8B0C6950558CB25 /* Pods-SentimentsTests.debug.xcconfig */,
+				AAC162CA25E9F2FD89A2126D /* Pods-SentimentsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EB7645332197B5CE008797CF = {
 			isa = PBXGroup;
 			children = (
 				EB76453E2197B5CE008797CF /* Sentiments */,
 				EB7645532197B5D0008797CF /* SentimentsTests */,
 				EB76453D2197B5CE008797CF /* Products */,
+				A4853DC61A075A8C3269D4F4 /* Pods */,
+				3439998EE2475C482C0087D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +115,12 @@
 		EB76453E2197B5CE008797CF /* Sentiments */ = {
 			isa = PBXGroup;
 			children = (
+				EB7645612197F165008797CF /* Frameworks */,
 				EB76453F2197B5CE008797CF /* AppDelegate.swift */,
 				EB7645412197B5CE008797CF /* ViewController.swift */,
+				EB6471072198C32C00A1ED5A /* ResultsTableViewCell.swift */,
+				EB76455F2197B8E4008797CF /* Comments.swift */,
+				EBD7F22821ABB61E0021DC6F /* FaceView.swift */,
 				EB7645432197B5CE008797CF /* Main.storyboard */,
 				EB7645462197B5D0008797CF /* Assets.xcassets */,
 				EB7645482197B5D0008797CF /* LaunchScreen.storyboard */,
@@ -96,6 +138,13 @@
 			path = SentimentsTests;
 			sourceTree = "<group>";
 		};
+		EB7645612197F165008797CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB7645592197B5D0008797CF /* Build configuration list for PBXNativeTarget "Sentiments" */;
 			buildPhases = (
+				ABFF07C34003C02CEEC268DC /* [CP] Check Pods Manifest.lock */,
 				EB7645382197B5CE008797CF /* Sources */,
 				EB7645392197B5CE008797CF /* Frameworks */,
 				EB76453A2197B5CE008797CF /* Resources */,
+				21002D0215CC898EC8980E2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +171,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB76455C2197B5D0008797CF /* Build configuration list for PBXNativeTarget "SentimentsTests" */;
 			buildPhases = (
+				F43821955C3D7DABD493F765 /* [CP] Check Pods Manifest.lock */,
 				EB76454C2197B5D0008797CF /* Sources */,
 				EB76454D2197B5D0008797CF /* Frameworks */,
 				EB76454E2197B5D0008797CF /* Resources */,
@@ -192,13 +244,102 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21002D0215CC898EC8980E2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sentiments/Pods-Sentiments-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ABGaugeViewKit/ABGaugeViewKit.framework",
+				"${BUILT_PRODUCTS_DIR}/DDSpiderChart/DDSpiderChart.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonAssistantV1/Assistant.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonAssistantV2/Assistant.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonConversationV1/Conversation.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonDiscoveryV1/Discovery.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonLanguageTranslatorV3/LanguageTranslator.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonNaturalLanguageClassifierV1/NaturalLanguageClassifier.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonNaturalLanguageUnderstandingV1/NaturalLanguageUnderstanding.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonPersonalityInsightsV3/PersonalityInsights.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonRestKit/RestKit.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonSpeechToTextV1/SpeechToText.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonTextToSpeechV1/TextToSpeech.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonToneAnalyzerV3/ToneAnalyzer.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMWatsonVisualRecognitionV3/VisualRecognition.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABGaugeViewKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DDSpiderChart.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Assistant.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Conversation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Discovery.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LanguageTranslator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NaturalLanguageClassifier.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NaturalLanguageUnderstanding.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PersonalityInsights.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RestKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpeechToText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextToSpeech.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ToneAnalyzer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualRecognition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sentiments/Pods-Sentiments-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABFF07C34003C02CEEC268DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sentiments-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F43821955C3D7DABD493F765 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SentimentsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB7645382197B5CE008797CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EB7645422197B5CE008797CF /* ViewController.swift in Sources */,
+				EB6471082198C32C00A1ED5A /* ResultsTableViewCell.swift in Sources */,
 				EB7645402197B5CE008797CF /* AppDelegate.swift in Sources */,
+				EB7645602197B8E4008797CF /* Comments.swift in Sources */,
+				EBD7F22921ABB61F0021DC6F /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +499,13 @@
 		};
 		EB76455A2197B5D0008797CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19B92358FF7A8AA00B371B4F /* Pods-Sentiments.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X85PLZ26L;
 				INFOPLIST_FILE = Sentiments/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,11 +519,13 @@
 		};
 		EB76455B2197B5D0008797CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56C5024CC4FE00104E0CCC63 /* Pods-Sentiments.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X85PLZ26L;
 				INFOPLIST_FILE = Sentiments/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,12 +539,14 @@
 		};
 		EB76455D2197B5D0008797CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82967ACFD8B0C6950558CB25 /* Pods-SentimentsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X85PLZ26L;
 				INFOPLIST_FILE = SentimentsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,12 +562,14 @@
 		};
 		EB76455E2197B5D0008797CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAC162CA25E9F2FD89A2126D /* Pods-SentimentsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6X85PLZ26L;
 				INFOPLIST_FILE = SentimentsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
