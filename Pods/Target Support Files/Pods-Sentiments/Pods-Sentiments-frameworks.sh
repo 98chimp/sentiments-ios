@@ -144,6 +144,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ABGaugeViewKit/ABGaugeViewKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DDSpiderChart/DDSpiderChart.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonAssistantV1/Assistant.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonAssistantV2/Assistant.framework"
@@ -158,10 +159,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonTextToSpeechV1/TextToSpeech.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonToneAnalyzerV3/ToneAnalyzer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonVisualRecognitionV3/VisualRecognition.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ABGaugeViewKit/ABGaugeViewKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DDSpiderChart/DDSpiderChart.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonAssistantV1/Assistant.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonAssistantV2/Assistant.framework"
@@ -176,6 +179,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonTextToSpeechV1/TextToSpeech.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonToneAnalyzerV3/ToneAnalyzer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IBMWatsonVisualRecognitionV3/VisualRecognition.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

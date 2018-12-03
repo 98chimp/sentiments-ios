@@ -1,5 +1,8 @@
 PODS:
   - ABGaugeViewKit (1.0.1)
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
   - DDSpiderChart (0.4)
   - IBMWatsonAssistantV1 (0.37.0):
     - IBMWatsonRestKit (~> 1.3.0)
@@ -27,10 +30,12 @@ PODS:
     - IBMWatsonRestKit (~> 1.3.0)
   - IBMWatsonVisualRecognitionV3 (0.37.0):
     - IBMWatsonRestKit (~> 1.3.0)
+  - PureLayout (3.1.4)
   - Starscream (3.0.5)
 
 DEPENDENCIES:
   - ABGaugeViewKit (~> 1.0)
+  - Charts (~> 3.0.0)
   - DDSpiderChart (~> 0.4)
   - IBMWatsonAssistantV1 (~> 0.37.0)
   - IBMWatsonAssistantV2 (~> 0.37.0)
@@ -44,10 +49,12 @@ DEPENDENCIES:
   - IBMWatsonTextToSpeechV1 (~> 0.37.0)
   - IBMWatsonToneAnalyzerV3 (~> 0.37.0)
   - IBMWatsonVisualRecognitionV3 (~> 0.37.0)
+  - PureLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ABGaugeViewKit
+    - Charts
     - DDSpiderChart
     - IBMWatsonAssistantV1
     - IBMWatsonAssistantV2
@@ -62,10 +69,12 @@ SPEC REPOS:
     - IBMWatsonTextToSpeechV1
     - IBMWatsonToneAnalyzerV3
     - IBMWatsonVisualRecognitionV3
+    - PureLayout
     - Starscream
 
 SPEC CHECKSUMS:
   ABGaugeViewKit: b69c855c2878e5ba49605b0662d409c1577ed198
+  Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
   DDSpiderChart: b46ba1b4320e69921d370193dfe4a2c3d7fcb3c9
   IBMWatsonAssistantV1: c6b886bc3635945d05ed51af31c6cbc73f836651
   IBMWatsonAssistantV2: 239ce0bcfeb07fc03cb5859f5ea94accd888af08
@@ -80,8 +89,9 @@ SPEC CHECKSUMS:
   IBMWatsonTextToSpeechV1: 7792123fa81632c4238b4d32b2ee01bbc0455512
   IBMWatsonToneAnalyzerV3: 51c10c93e208accf0551e9763681827997e37c7b
   IBMWatsonVisualRecognitionV3: 715ae5e01e74af56eeb81291af62b863f53afa72
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
 
-PODFILE CHECKSUM: f7f553616d3042a28e2fc706b2aed32e40daeb9f
+PODFILE CHECKSUM: e320c66a13d6d524af73b2caee5f108e55a7ac8b
 
 COCOAPODS: 1.5.3

@@ -11,26 +11,26 @@ import NaturalLanguageUnderstanding
 
 func rounded(value: Double) -> Double { return round(100 * value) / 100 }
 
-var sentimentScores = [Double]()
-var angerScores = [Double]()
-var disgustScores = [Double]()
-var fearScores = [Double]()
-var joyScores = [Double]()
-var sadnessScores = [Double]()
+class Scores: NSObject
+{
+    @objc dynamic var sentiment = [Double]()
+    @objc dynamic var anger = [Double]()
+    @objc dynamic var disgust = [Double]()
+    @objc dynamic var fear = [Double]()
+    @objc dynamic var joy = [Double]()
+    @objc dynamic var sadness = [Double]()
+}
 
 class ResultsTableViewCell: UITableViewCell
 {
     @IBOutlet weak var analyzedTextLabel: UILabel!
-    @IBOutlet weak var sentimentCategoryLabel: UILabel!
-    @IBOutlet weak var sentimentValueLabel: UILabel!
-    @IBOutlet weak var angerValueLabel: UILabel!
-    @IBOutlet weak var disgustValueLabel: UILabel!
-    @IBOutlet weak var fearValueLabel: UILabel!
-    @IBOutlet weak var joyValueLabel: UILabel!
-    @IBOutlet weak var sadnessValueLabel: UILabel!
-    @IBOutlet weak var faceView: FaceView!
+    @IBOutlet weak var guageView: UIView!
+    @IBOutlet weak var chartView: UIView!
     
-    func configureCell(with analysisResult: AnalysisResults)
+    fileprivate let sentimentGuageView = SentimentGuageView()
+    fileprivate let emotionSpiderChart = EmotionSpiderView()
+    
+    func configureCell(with analysisResult: AnalysisResults, and scores: Scores)
     {
         let sentimentValue = analysisResult.sentiment?.document?.score ?? 0
         let emotion = analysisResult.emotion?.document?.emotion
@@ -40,20 +40,17 @@ class ResultsTableViewCell: UITableViewCell
         let joyValue = emotion?.joy ?? 0
         let sadnessValue = emotion?.sadness ?? 0
         analyzedTextLabel.text = analysisResult.analyzedText
-        sentimentCategoryLabel.text = analysisResult.sentiment?.document?.label
-        sentimentValueLabel.text = "\(rounded(value: sentimentValue))"
-        angerValueLabel.text = "\(rounded(value: angerValue))"
-        disgustValueLabel.text = "\(rounded(value: disgustValue))"
-        fearValueLabel.text = "\(rounded(value: fearValue))"
-        joyValueLabel.text = "\(rounded(value: joyValue))"
-        sadnessValueLabel.text = "\(rounded(value: sadnessValue))"
-        faceView.smiliness = rounded(value: sentimentValue)
+
+        sentimentGuageView.create(for: guageView)
+        sentimentGuageView.sentiment = CGFloat(sentimentValue)
         
-        sentimentScores.append(sentimentValue)
-        angerScores.append(angerValue)
-        disgustScores.append(disgustValue)
-        fearScores.append(fearValue)
-        joyScores.append(joyValue)
-        sadnessScores.append(sadnessValue)
+        emotionSpiderChart.createChart(for: chartView)
+        emotionSpiderChart.emotions = [angerValue, disgustValue, fearValue, joyValue, sadnessValue]
+        scores.sentiment.append(sentimentValue)
+        scores.anger.append(angerValue)
+        scores.disgust.append(disgustValue)
+        scores.fear.append(fearValue)
+        scores.joy.append(joyValue)
+        scores.sadness.append(sadnessValue)
     }
 }

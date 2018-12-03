@@ -14,34 +14,14 @@ class ViewController: UIViewController
     fileprivate let watsonNLU = NaturalLanguageUnderstanding(version: "2018-03-16", apiKey: "rC26f38AVIJh0cR68-rn503LXckcqS9GWCvFzKYjTtD7")
     fileprivate var analysisResults = [AnalysisResults]()
     fileprivate let cellIdentifier = "ResultsTableViewCell"
+    fileprivate let emotionsSpiderChart = EmotionSpiderView()
+    fileprivate let sentimentGuageView = SentimentGuageView()
     @IBOutlet fileprivate weak var resultsTableView: UITableView!
-    @IBOutlet weak var sentimentCategoryLabel: UILabel!
     @IBOutlet weak var sentimentLabel: UILabel!
-    @IBOutlet weak var faceView: FaceView!
-    @IBOutlet weak var angerLabel: UILabel!
-    @IBOutlet weak var disgustLabel: UILabel!
-    @IBOutlet weak var fearLabel: UILabel!
-    @IBOutlet weak var joyLabel: UILabel!
-    @IBOutlet weak var sadnessLabel: UILabel!
-    
-    var sentimentAvg: Double {
-        return sentimentScores.isEmpty ? 0 : sentimentScores.reduce(0) { $0 + $1 } / Double(sentimentScores.count)
-    }
-    var angerAvg: Double {
-        return angerScores.isEmpty ? 0 : angerScores.reduce(0) { $0 + $1 } / Double(angerScores.count)
-    }
-    var disgustAvg: Double {
-        return disgustScores.isEmpty ? 0 : disgustScores.reduce(0) { $0 + $1 } / Double(disgustScores.count)
-    }
-    var fearAvg: Double {
-        return fearScores.isEmpty ? 0 : fearScores.reduce(0) { $0 + $1 } / Double(fearScores.count)
-    }
-    var joyAvg: Double {
-        return joyScores.isEmpty ? 0 : joyScores.reduce(0) { $0 + $1 } / Double(joyScores.count)
-    }
-    var sadnessAvg: Double {
-        return sadnessScores.isEmpty ? 0 : sadnessScores.reduce(0) { $0 + $1 } / Double(sadnessScores.count)
-    }
+    @IBOutlet weak var guageView: UIView!
+    @IBOutlet weak var spiderView: UIView!
+    var emotionDataAddedToChart = false
+    let scores = Scores()
     
     override func viewDidLoad()
     {
@@ -49,23 +29,22 @@ class ViewController: UIViewController
         // Do any additional setup after loading the view, typically from a nib.
         setupTableView()
         submitCommentsForAnalysis()
+        sentimentGuageView.create(for: guageView)
+        emotionsSpiderChart.createChart(for: spiderView)
     }
     
-    fileprivate func setupSummary()
+    fileprivate func updateSummary()
     {
-        sentimentLabel.text = "\(rounded(value: sentimentAvg))"
-        faceView.smiliness = rounded(value: sentimentAvg)
-        angerLabel.text = "\(rounded(value: angerAvg))"
-        disgustLabel.text = "\(rounded(value: disgustAvg))"
-        fearLabel.text = "\(rounded(value: fearAvg))"
-        joyLabel.text = "\(rounded(value: joyAvg))"
-        sadnessLabel.text = "\(rounded(value: sadnessAvg))"
+        sentimentGuageView.sentiment = CGFloat(scores.sentiment.average)
+        sentimentLabel.text = "\(rounded(value: scores.sentiment.average))"
+        emotionsSpiderChart.emotions = [scores.anger.average, scores.disgust.average, scores.fear.average, scores.joy.average, scores.sadness.average]
     }
     
     fileprivate func setupTableView()
     {
         resultsTableView.rowHeight = UITableViewAutomaticDimension
         resultsTableView.estimatedRowHeight = 180.0
+        resultsTableView.allowsSelection = false
     }
     
     fileprivate func submitCommentsForAnalysis()
@@ -79,11 +58,11 @@ class ViewController: UIViewController
     {
         let features = Features(concepts: nil, emotion: EmotionOptions(document: true, targets: nil), entities: nil, keywords: nil, metadata: nil, relations: nil, semanticRoles: nil, sentiment: SentimentOptions(document: true, targets: nil), categories: nil)
         let parameters = Parameters(features: features, text: text, html: nil, url: nil, clean: nil, xpath: nil, fallbackToRaw: nil, returnAnalyzedText: true, language: "en", limitTextCharacters: nil)
-        watsonNLU.analyze(parameters: parameters) { [weak self] (results) in
-            self?.analysisResults.append(results)
+        watsonNLU.analyze(parameters: parameters) { [unowned self] (results) in
+            self.analysisResults.append(results)
+            self.updateSummary()
             DispatchQueue.main.async {
-                self?.resultsTableView.reloadData()
-                self?.setupSummary()
+                self.resultsTableView.reloadData()
             }
         }
     }
@@ -99,7 +78,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let resultsCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ResultsTableViewCell
-        resultsCell.configureCell(with: analysisResults[indexPath.row])
+        resultsCell.configureCell(with: analysisResults[indexPath.row], and: scores)
         return resultsCell
     }
     
@@ -114,3 +93,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
     }
 }
 
+extension Collection where Element: Numeric
+{
+    /// Returns the total sum of all elements in the array
+    var total: Element { return reduce(0, +) }
+}
+
+extension Collection where Element: BinaryInteger
+{
+    /// Returns the average of all elements in the array
+    var average: Double {
+        return isEmpty ? 0 : Double(Int(total)) / Double(count)
+    }
+}
+
+extension Collection where Element: BinaryFloatingPoint
+{
+    /// Returns the average of all elements in the array
+    var average: Element {
+        return isEmpty ? 0 : total / Element(count)
+    }
+}

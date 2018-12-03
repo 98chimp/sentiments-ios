@@ -18,6 +18,8 @@ target 'Sentiments' do
   pod 'IBMWatsonVisualRecognitionV3', '~> 0.37.0'
   pod 'ABGaugeViewKit', '~> 1.0'
   pod 'DDSpiderChart', '~> 0.4'
+  pod 'Charts', '~> 3.0.0'
+  pod 'PureLayout'
 
   target 'SentimentsTests' do
     inherit! :search_paths
