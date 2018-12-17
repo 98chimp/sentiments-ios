@@ -60,8 +60,8 @@ class ViewController: UIViewController
         let parameters = Parameters(features: features, text: text, html: nil, url: nil, clean: nil, xpath: nil, fallbackToRaw: nil, returnAnalyzedText: true, language: "en", limitTextCharacters: nil)
         watsonNLU.analyze(parameters: parameters) { [unowned self] (results) in
             self.analysisResults.append(results)
-            self.updateSummary()
             DispatchQueue.main.async {
+                self.updateSummary()
                 self.resultsTableView.reloadData()
             }
         }
